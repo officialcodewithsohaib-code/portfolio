@@ -132,7 +132,7 @@
     @apply border-border !scroll-smooth;
   }
   body {
-    @apply bg-white text-foreground;
+       @apply bg-background text-foreground transition-colors duration-300;
   }
   button {
     @apply active:outline-none;
