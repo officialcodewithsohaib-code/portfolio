@@ -1,33 +1,42 @@
-import Hero from "@/components/Hero";
-import CompanyOverview from "@/components/CompanyOverview";
-import ServiceLocations from "@/components/ServiceLocations";
-import ImportPartners from "@/components/ImportPartners";
-import CustomerCare from "@/components/CustomerCare";
-import NationalService from "@/components/NationalService";
-import { FloatingNav } from "@/components/ui/FloatingNav";
-import { FaHome, FaBuilding, FaGlobeAsia, FaHandshake, FaUsers, FaFlag } from "react-icons/fa";
+"use client";
 
-export default function Home() {
-  const navItems = [
-    { name: "Home", link: "#home", icon: <FaHome /> },
-    { name: "About", link: "#about", icon: <FaBuilding /> },
-    { name: "Locations", link: "#locations", icon: <FaGlobeAsia /> },
-    { name: "Partners", link: "#partners", icon: <FaHandshake /> },
-    { name: "Customers", link: "#customers", icon: <FaUsers /> },
-    { name: "Services", link: "#services", icon: <FaFlag /> },
-  ];
+import React, { useState } from "react";
+import { Hero } from "@/components/home/Hero";
+import { CompanyOverview } from "@/components/home/CompanyOverview";
+import { ServiceLocations } from "@/components/home/ServiceLocations";
+import { ImportPartners } from "@/components/home/ImportPartners";
+import { CustomerCare } from "@/components/home/CustomerCare";
+import { NationalService } from "@/components/home/NationalService";
+import { VideoModal } from "@/components/home/VideoModal";
+import { PageLayout } from "@/components/layout/PageLayout";
+
+export default function HomePage() {
+  const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
+
+  // Replace with your actual YouTube/Vimeo video embed URL
+  const demoVideoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
 
   return (
-    <main className="relative bg-white flex justify-center items-center flex-col overflow-hidden mx-auto sm:px-10 px-5">
-      <div className="max-w-7xl w-full">
-        <FloatingNav navItems={navItems} />
-        <Hero />
+    <main className="relative min-h-screen bg-[#F8FAFB] dark:bg-gray-950 overflow-hidden">
+      {/* Animated Background */}
+       <PageLayout> 
+
+      {/* Main Content */}
+      <div className="relative z-10">
+        <Hero onWatchDemo={() => setIsVideoModalOpen(true)} />
         <CompanyOverview />
         <ServiceLocations />
         <ImportPartners />
         <CustomerCare />
-        <NationalService />
       </div>
+
+      {/* Video Modal */}
+      <VideoModal
+        isOpen={isVideoModalOpen}
+        onClose={() => setIsVideoModalOpen(false)}
+        videoUrl={demoVideoUrl}
+      />
+      </PageLayout>
     </main>
   );
 }
