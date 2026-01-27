@@ -17,9 +17,9 @@ const Navbar = () => {
 
   const navLinks = [
     { name: "Home", path: "/" },
-    { name: "Chairman's Ambition", path: "/chairmans-ambition" },
-    { name: "Company Details", path: "/company-details" },
-    { name: "Projects", path: "/universe-led" },
+    { name: "About", path: "/about" },
+    { name: "Services", path: "/services" },
+    { name: "Projects", path: "/projects" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -58,10 +58,10 @@ const Navbar = () => {
                 className="flex flex-col cursor-pointer"
               >
                 <span className="text-2xl md:text-3xl font-bold text-[#0066CC] dark:text-[#4A90E2]">
-                  AL-IBRAHIM GROUP
+                  Official.CodeWithSohaib
                 </span>
                 <span className="text-[10px] md:text-xs text-[#4B5563] dark:text-[#9CA3AF] tracking-[0.2em] uppercase">
-                  Chemical & Industrial Solutions
+                  MERN Stack Developer & Learning Agentic AI  
                 </span>
               </motion.div>
             </Link>

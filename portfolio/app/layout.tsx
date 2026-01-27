@@ -27,8 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+          <head>
+        {/* Prevent browser extension interference */}
+        <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
+        suppressHydrationWarning 
       >
    <ThemeProvider
             attribute="class"
