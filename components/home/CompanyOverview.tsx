@@ -9,7 +9,6 @@ export const CompanyOverview = () => {
     { number: "50+", label: "Projects Delivered", icon: <FaRocket />, color: "text-[#0066CC]" },
     { number: "30+", label: "AI Agents Built", icon: <FaBrain />, color: "text-[#10B981]" },
     { number: "100%", label: "Client Satisfaction", icon: <FaChartLine />, color: "text-[#F59E0B]" },
-    { number: "24/7", label: "Support Available", icon: <FaCog />, color: "text-[#4A90E2]" },
   ];
 
   return (
@@ -20,7 +19,7 @@ export const CompanyOverview = () => {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.8 }}
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="grid grid-cols-2 md:grid-cols-3 gap-6"
         >
           {stats.map((stat, index) => (
             <motion.div
