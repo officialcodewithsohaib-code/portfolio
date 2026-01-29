@@ -174,7 +174,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center mb-8 pb-4 border-b border-[#E4E7EB] dark:border-[#4B5563]">
                   <div>
                     <span className="text-xl font-bold text-[#0066CC] dark:text-[#4A90E2] block">
-                      AL-IBRAHIM
+                      Official.CodeWithSohaib
                     </span>
                     <span className="text-xs text-[#4B5563] dark:text-[#9CA3AF] tracking-wider">
                       MENU
@@ -224,7 +224,7 @@ const Navbar = () => {
           </>
         )}
       </AnimatePresence>
-      
+
     </>
   );
 };
