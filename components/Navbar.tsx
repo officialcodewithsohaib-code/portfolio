@@ -224,6 +224,7 @@ const Navbar = () => {
           </>
         )}
       </AnimatePresence>
+      
     </>
   );
 };
