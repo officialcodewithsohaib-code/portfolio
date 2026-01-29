@@ -24,19 +24,19 @@ export const Hero: React.FC<HeroProps> = ({ onWatchDemo }) => {
       icon: <FaGithub className="text-xl" />,
       href: "https://github.com/yourusername",
       label: "GitHub",
-      color: "hover:bg-[#333]",
+      color: "hover:bg-transparent",
     },
     {
       icon: <FaLinkedin className="text-xl" />,
       href: "https://linkedin.com/in/yourusername",
       label: "LinkedIn",
-      color: "hover:bg-[#0077B5]",
+      color: "hover:bg-transparent",
     },
     {
       icon: <FaEnvelope className="text-xl" />,
-      href: "mailto:your.email@example.com",
+      href: "mailto:sohaiburrehman65@gmail.com",
       label: "Email",
-      color: "hover:bg-[#EA4335]",
+      color: "hover:bg-transparent",
     },
   ];
 
@@ -122,7 +122,7 @@ export const Hero: React.FC<HeroProps> = ({ onWatchDemo }) => {
               rel="noopener noreferrer"
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-12 h-12 flex items-center justify-center bg-white dark:bg-[#1F2937] border border-[#E4E7EB] dark:border-[#4B5563] rounded-full text-[#4B5563] dark:text-[#9CA3AF] hover:text-white hover:border-transparent transition-all duration-300 shadow-lg cursor-pointer group"
+              className="w-12 h-12 flex items-center justify-center bg-white dark:bg-[#1F2937] border border-[#E4E7EB] dark:border-[#4B5563] rounded-full text-[#4B5563] dark:text-[#9CA3AF] hover:border-transparent transition-all duration-300 shadow-lg cursor-pointer group"
               aria-label={social.label}
             >
               <span className="group-hover:scale-110 transition-transform duration-300">
