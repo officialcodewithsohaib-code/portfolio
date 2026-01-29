@@ -196,7 +196,7 @@
     return (
       <>
       <PageLayout>
-      <section id="projects" className="relative py-20 pt-36 bg-[#F8FAFB] dark:bg-gray-950 overflow-hidden">
+      <section id="projects" className="relative py-20 pt-36 dark:bg-gray-950 overflow-hidden">
         {/* Background Decorative Blobs */}
         <div className="absolute top-0 left-0 w-96 h-96 bg-[#0066CC]/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob" />
         <div className="absolute top-0 right-0 w-96 h-96 bg-[#4A90E2]/5 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000" />
@@ -341,9 +341,9 @@
             className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16"
           >
             {[
-              { number: "12+", label: "Projects Completed" },
-              { number: "6", label: "MERN Stack Apps" },
-              { number: "6", label: "AI Agents Built" },
+              { number: "4+", label: "Projects Completed" },
+              { number: "4", label: "MERN Stack Apps" },
+              { number: "1", label: "AI Agents Built" },
               { number: "100%", label: "Client Satisfaction" },
             ].map((stat, index) => (
               <motion.div

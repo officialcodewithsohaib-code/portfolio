@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AL-IBRAHIM GROUP",
-  description: "CHEMICAL AND INDUSTRIAL SOLUTIONS",
+  title: "Offical.CodeWithSohaib",
+  description: "MERN Stack Developer | React.js | Next.js | Node.js | Express.js | MongoDB | JavaScript | TypeScript | Portfolio | Agentic AI Learner",
 };
 
 export default function RootLayout({

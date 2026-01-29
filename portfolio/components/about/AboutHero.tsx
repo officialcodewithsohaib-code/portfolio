@@ -46,9 +46,9 @@ export const AboutHero = () => {
           className="flex flex-wrap justify-center gap-6 mt-12"
         >
           {[
-            { icon: <FaCode />, text: "5+ Years Experience" },
-            { icon: <FaBrain />, text: "AI Specialist" },
-            { icon: <FaUser />, text: "50+ Projects" },
+            { icon: <FaCode />, text: "1+ Years Experience" },
+            { icon: <FaBrain />, text: "Agentic AI (Learning)" },
+            { icon: <FaUser />, text: "5+ Projects" },
           ].map((item, index) => (
             <motion.div
               key={index}
