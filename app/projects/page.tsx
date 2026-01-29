@@ -343,7 +343,7 @@
             {[
               { number: "4+", label: "Projects Completed" },
               { number: "4", label: "MERN Stack Apps" },
-              { number: "1", label: "AI Agents Built" },
+              { number: "1", label: "AI Agent (In Progress)" },
               { number: "100%", label: "Client Satisfaction" },
             ].map((stat, index) => (
               <motion.div
