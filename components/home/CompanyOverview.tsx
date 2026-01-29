@@ -6,8 +6,8 @@ import { FaRocket, FaBrain, FaChartLine, FaCog } from "react-icons/fa";
 
 export const CompanyOverview = () => {
   const stats = [
-    { number: "50+", label: "Projects Delivered", icon: <FaRocket />, color: "text-[#0066CC]" },
-    { number: "30+", label: "AI Agents Built", icon: <FaBrain />, color: "text-[#10B981]" },
+    { number: "4+", label: "Projects Delivered", icon: <FaRocket />, color: "text-[#0066CC]" },
+    { number: "1+", label: "AI Agents Built", icon: <FaBrain />, color: "text-[#10B981]" },
     { number: "100%", label: "Client Satisfaction", icon: <FaChartLine />, color: "text-[#F59E0B]" },
   ];
 

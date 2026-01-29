@@ -14,7 +14,7 @@ export default function HomePage() {
   const [isVideoModalOpen, setIsVideoModalOpen] = useState(false);
 
   // Replace with your actual YouTube/Vimeo video embed URL
-  const demoVideoUrl = "https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1";
+  const demoVideoUrl = "https://www.youtube.com/embed/8MyFDttUqbM?autoplay=1";
 
   return (
     <main className="relative min-h-screen bg-[#F8FAFB] dark:bg-gray-950 overflow-hidden">

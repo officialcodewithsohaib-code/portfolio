@@ -14,7 +14,7 @@ import { AvailabilityCard } from "@/components/contact/AvailabilityCard";
 export default function Contact() {
   return (
     <PageLayout>
-      <main className="min-h-screen bg-[#F8FAFB] dark:bg-gray-950 pt-28 pb-16 overflow-hidden">
+      <main className="min-h-screen dark:bg-gray-950 pt-28 pb-16 overflow-hidden">
         {/* Spotlight Effect */}
         <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="#0066CC" />
 
