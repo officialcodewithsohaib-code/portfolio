@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import Navbar from "@/components/Navbar";
+import { PortfolioChatbot } from '@/components/chatbot/PortfolioChatbot';
+
 
 
 const geistSans = Geist({
@@ -43,6 +45,7 @@ export default function RootLayout({
           >
              <Navbar />
             {children}
+            <PortfolioChatbot />
           </ThemeProvider>
       </body>
     </html>
