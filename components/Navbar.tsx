@@ -46,7 +46,7 @@ const Navbar = () => {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-500",
           scrolled
             ? "bg-white/95 dark:bg-[#1F2937]/95 backdrop-blur-lg shadow-xl border-b border-[#E4E7EB] dark:border-[#4B5563]"
-            : "bg-white/80 dark:bg-[#1F2937]/80 backdrop-blur-md"
+            : "bg-white/80 dark:bg-[#1F2937]/80 backdrop-blur-md",
         )}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -57,17 +57,17 @@ const Navbar = () => {
                 whileHover={{ scale: 1.02 }}
                 className="flex flex-col cursor-pointer"
               >
-                <span className="text-2xl md:text-3xl font-bold text-[#0066CC] dark:text-[#4A90E2]">
+                <span className="text-lg xs:text-xl md:text-3xl font-bold text-[#0066CC] dark:text-[#4A90E2]">
                   Official.CodeWithSohaib
                 </span>
-                <span className="text-[10px] md:text-xs text-[#4B5563] dark:text-[#9CA3AF] tracking-[0.2em] uppercase">
-                  MERN Stack Developer & Learning Agentic AI  
+                <span className="text-[9px] md:text-xs text-[#4B5563] dark:text-[#9CA3AF] tracking-[0.2em] uppercase">
+                  MERN Stack Developer & Learning Agentic AI
                 </span>
               </motion.div>
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-2">
+            <div className="hidden lg:flex items-center space-x-">
               {navLinks.map((link, index) => (
                 <Link key={link.path} href={link.path}>
                   <motion.div
@@ -95,7 +95,7 @@ const Navbar = () => {
                         "relative z-10 text-sm font-medium transition-colors duration-300",
                         pathname === link.path
                           ? "text-[#0066CC] dark:text-[#4A90E2] font-semibold"
-                          : "text-[#4B5563] dark:text-[#D1D5DB] hover:text-[#0066CC] dark:hover:text-[#4A90E2]"
+                          : "text-[#4B5563] dark:text-[#D1D5DB] hover:text-[#0066CC] dark:hover:text-[#4A90E2]",
                       )}
                     >
                       {link.name}
@@ -107,12 +107,13 @@ const Navbar = () => {
                         layoutId="navbar-indicator"
                         className="absolute bottom-0 left-0 right-0 h-1 rounded-full"
                         style={{
-                          background: "linear-gradient(90deg, #0066CC 0%, #4A90E2 100%)",
+                          background:
+                            "linear-gradient(90deg, #0066CC 0%, #4A90E2 100%)",
                         }}
-                        transition={{ 
-                          type: "spring", 
-                          stiffness: 400, 
-                          damping: 30 
+                        transition={{
+                          type: "spring",
+                          stiffness: 400,
+                          damping: 30,
                         }}
                       />
                     )}
@@ -122,7 +123,7 @@ const Navbar = () => {
             </div>
 
             {/* Right Side Actions */}
-            <div className="flex items-center space-x-3">
+            <div className="flex items-center space-x-0 md:space-x-3">
               <ThemeToggle />
 
               {/* Mobile Menu Button */}
@@ -162,10 +163,10 @@ const Navbar = () => {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ 
-                type: "spring", 
-                damping: 30, 
-                stiffness: 300 
+              transition={{
+                type: "spring",
+                damping: 30,
+                stiffness: 300,
               }}
               className="fixed top-0 right-0 bottom-0 w-[85%] max-w-sm bg-white dark:bg-[#1F2937] shadow-2xl z-50 lg:hidden overflow-y-auto"
             >
@@ -203,7 +204,7 @@ const Navbar = () => {
                           "block px-5 py-4 rounded-xl font-medium transition-all duration-300",
                           pathname === link.path
                             ? "bg-gradient-to-r from-[#0066CC] to-[#4A90E2] text-white shadow-lg"
-                            : "text-[#4B5563] dark:text-[#D1D5DB] hover:bg-[#F5F7FA] dark:hover:bg-[#374151]"
+                            : "text-[#4B5563] dark:text-[#D1D5DB] hover:bg-[#F5F7FA] dark:hover:bg-[#374151]",
                         )}
                       >
                         {link.name}
@@ -215,7 +216,8 @@ const Navbar = () => {
                 {/* Mobile Footer */}
                 <div className="mt-8 pt-6 border-t border-[#E4E7EB] dark:border-[#4B5563]">
                   <p className="text-xs text-center text-[#4B5563] dark:text-[#9CA3AF] leading-relaxed">
-                    Leading Provider of Premium<br />
+                    Leading Provider of Premium
+                    <br />
                     Chemical & Industrial Solutions
                   </p>
                 </div>
@@ -224,7 +226,6 @@ const Navbar = () => {
           </>
         )}
       </AnimatePresence>
-
     </>
   );
 };

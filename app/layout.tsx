@@ -3,9 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "./provider";
 import Navbar from "@/components/Navbar";
-import { PortfolioChatbot } from '@/components/chatbot/PortfolioChatbot';
-
-
+import { PortfolioChatbot } from "@/components/chatbot/PortfolioChatbot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Offical.CodeWithSohaib",
-  description: "MERN Stack Developer | React.js | Next.js | Node.js | Express.js | MongoDB | JavaScript | TypeScript | Portfolio | Agentic AI Learner",
+  description:
+    "MERN Stack Developer | React.js | Next.js | Node.js | Express.js | MongoDB | JavaScript | TypeScript | Portfolio | Agentic AI Learner",
 };
 
 export default function RootLayout({
@@ -29,24 +28,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-          <head>
+      <head>
         {/* Prevent browser extension interference */}
-        <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+        <meta
+          name="format-detection"
+          content="telephone=no, date=no, email=no, address=no"
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
-        suppressHydrationWarning 
+        suppressHydrationWarning
       >
-   <ThemeProvider
-            attribute="class"
-            defaultTheme="dark"
-            enableSystem
-            disableTransitionOnChange
-          >
-             <Navbar />
-            {children}
-            <PortfolioChatbot />
-          </ThemeProvider>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem
+          disableTransitionOnChange
+        >
+          <Navbar />
+          {children}
+          {/* <PortfolioChatbot /> */}
+        </ThemeProvider>
       </body>
     </html>
   );

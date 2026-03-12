@@ -1,12 +1,12 @@
-'use client';
+"use client";
 
-import React, { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { X, Send, Loader2, Sparkles } from 'lucide-react';
-import { ChatMessage } from './ChatMessage';
-import { chatbotConfig } from '@/config/chatbot.config';
-import { sendChatMessage } from '@/lib/chatbotApi';
-import { Message } from '@/types/chatbot.types';
+import React, { useState, useRef, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { X, Send, Loader2, Sparkles } from "lucide-react";
+import { ChatMessage } from "./ChatMessage";
+import { chatbotConfig } from "@/config/chatbot.config";
+import { sendChatMessage } from "@/lib/chatbotApi";
+import { Message } from "@/types/chatbot.types";
 
 interface ChatWindowProps {
   onClose: () => void;
@@ -15,19 +15,19 @@ interface ChatWindowProps {
 export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: '1',
-      role: 'assistant',
+      id: "1",
+      role: "assistant",
       content: chatbotConfig.welcomeMessage,
       timestamp: new Date(),
     },
   ]);
-  const [input, setInput] = useState('');
+  const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   // Auto-scroll to bottom
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
 
   const handleSendMessage = async (question?: string) => {
@@ -37,12 +37,12 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
     // Add user message
     const userMessage: Message = {
       id: Date.now().toString(),
-      role: 'user',
+      role: "user",
       content: messageText,
       timestamp: new Date(),
     };
     setMessages((prev) => [...prev, userMessage]);
-    setInput('');
+    setInput("");
     setIsLoading(true);
 
     try {
@@ -52,7 +52,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
       // Add assistant message
       const assistantMessage: Message = {
         id: (Date.now() + 1).toString(),
-        role: 'assistant',
+        role: "assistant",
         content: answer,
         timestamp: new Date(),
       };
@@ -61,7 +61,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
       // Error message
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
-        role: 'assistant',
+        role: "assistant",
         content: "Sorry, I couldn't process your request. Please try again.",
         timestamp: new Date(),
       };
@@ -72,7 +72,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
     }
@@ -87,7 +87,7 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
       className="fixed bottom-4 right-4 w-[380px] h-[600px] bg-card border border-border rounded-2xl shadow-2xl flex flex-col overflow-hidden z-50"
     >
       {/* Header */}
-      <div className="bg-primary text-primary-foreground px-5 py-4 flex items-center justify-between">
+      <div className="bg-primary text-primary-foreground px-5 py-4 flex items-center justify-between  border-2 border-lime-400">
         <div className="flex items-center gap-2">
           <div className="bg-primary-foreground/20 p-2 rounded-full">
             <Sparkles size={18} />
@@ -123,9 +123,18 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
             </div>
             <div className="bg-secondary text-secondary-foreground rounded-2xl px-4 py-2.5">
               <div className="flex gap-1">
-                <span className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
-                <span className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
-                <span className="w-2 h-2 bg-current rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                <span
+                  className="w-2 h-2 bg-current rounded-full animate-bounce"
+                  style={{ animationDelay: "0ms" }}
+                />
+                <span
+                  className="w-2 h-2 bg-current rounded-full animate-bounce"
+                  style={{ animationDelay: "150ms" }}
+                />
+                <span
+                  className="w-2 h-2 bg-current rounded-full animate-bounce"
+                  style={{ animationDelay: "300ms" }}
+                />
               </div>
             </div>
           </motion.div>
@@ -138,15 +147,17 @@ export const ChatWindow: React.FC<ChatWindowProps> = ({ onClose }) => {
         <div className="px-4 pb-2">
           <p className="text-xs text-muted-foreground mb-2">Try asking:</p>
           <div className="flex flex-wrap gap-2">
-            {chatbotConfig.suggestedQuestions.slice(0, 2).map((question, idx) => (
-              <button
-                key={idx}
-                onClick={() => handleSendMessage(question)}
-                className="text-xs bg-secondary hover:bg-secondary/80 text-secondary-foreground px-3 py-1.5 rounded-full transition-colors"
-              >
-                {question}
-              </button>
-            ))}
+            {chatbotConfig.suggestedQuestions
+              .slice(0, 2)
+              .map((question, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleSendMessage(question)}
+                  className="text-xs bg-secondary hover:bg-secondary/80 text-secondary-foreground px-3 py-1.5 rounded-full transition-colors"
+                >
+                  {question}
+                </button>
+              ))}
           </div>
         </div>
       )}
