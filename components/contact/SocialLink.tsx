@@ -16,7 +16,7 @@ export const SocialLink = () => {
     {
       icon: <FaLinkedin />,
       name: "LinkedIn",
-      url: "https://linkedin.com/in/yourusername",
+      url: "https://www.linkedin.com/in/sohaib-ur-rehman-3a68a133b/",
       color: "hover:text-[#0066CC]",
       bgColor: "hover:bg-[#0066CC]/10",
     },
@@ -30,7 +30,7 @@ export const SocialLink = () => {
     {
       icon: <FaTwitter />,
       name: "Twitter",
-      url: "https://twitter.com/yourusername",
+      url: "https://x.com/sohaib_ur94584",
       color: "hover:text-[#4A90E2]",
       bgColor: "hover:bg-[#4A90E2]/10",
     },
