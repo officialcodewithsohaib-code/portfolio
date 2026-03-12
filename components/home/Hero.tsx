@@ -22,19 +22,19 @@ export const Hero: React.FC<HeroProps> = ({ onWatchDemo }) => {
   const socialLinks = [
     {
       icon: <FaGithub className="text-xl" />,
-      href: "https://github.com/yourusername",
+      href: "https://github.com/officialcodewithsohaib-code/",
       label: "GitHub",
       color: "hover:bg-transparent",
     },
     {
       icon: <FaLinkedin className="text-xl" />,
-      href: "https://linkedin.com/in/yourusername",
+      href: "https://www.linkedin.com/in/sohaib-ur-rehman-3a68a133b/",
       label: "LinkedIn",
       color: "hover:bg-transparent",
     },
     {
       icon: <FaEnvelope className="text-xl" />,
-      href: "mailto:sohaiburrehman65@gmail.com",
+      href: "mailto:official.codewithsohaib@gmail.com",
       label: "Email",
       color: "hover:bg-transparent",
     },
